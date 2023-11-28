@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Alert} from 'react-native'
 import React, {useState} from 'react';
 import { StatusBar } from 'react-native';
 import { Button } from 'react-native';
+import Jig from './jig';
 
 
 const App = () => {
@@ -9,8 +10,8 @@ const App = () => {
     <View style={{backgroundColor: '#ff0000', flex: 1,}}>
       <StatusBar backgroundColor={'green'} barStyle={'default'}  />
 
-      
-      <Text style={{color: '#a9a9f3',}}>Hello World!</Text>
+      <Jig name={'Abubakar Yahaya'}/>
+      <Jig name={'Yahaya Faaizah'}/>
   
        <Button 
        color={'#00ff73'}
