@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Modal, Button} from 'react-native'
+import React, {useState} from 'react';
+import { StatusBar } from 'react-native';
 
-export default function App() {
+
+const App = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false)
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{backgroundColor: '#ff0000', flex: 1,}}>
+      <StatusBar backgroundColor={'green'} barStyle={'default'}  />
+
+      <Button 
+      title='Open Modal'
+      onPress={() => setIsModalVisible(true)}
+      />
+
+      
+
+
+
+      <Text style={{color: '#a9a9f3',}}>Hello World!</Text>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App
+
+const styles = StyleSheet.create({})
